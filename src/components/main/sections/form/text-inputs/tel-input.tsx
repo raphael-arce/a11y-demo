@@ -1,6 +1,6 @@
 import { type FormEvent, useRef, useState } from "react";
 
-export function PasswordInput() {
+export function TelInput() {
 	const [value, setValue] = useState("");
 	const ref = useRef<HTMLInputElement>(null);
 
@@ -12,12 +12,12 @@ export function PasswordInput() {
 
 	return (
 		<p>
-			<label htmlFor="password">Passwort</label>{" "}
+			<label htmlFor="tel">Telefonnummer</label>{" "}
 			<input
 				ref={ref}
-				id="password"
-				type="password"
-				placeholder="Passwort"
+				id="tel"
+				type="tel"
+				placeholder="+49 30 123 456"
 				required
 				value={value}
 				onInput={handleInput}
