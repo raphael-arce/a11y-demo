@@ -1,8 +1,28 @@
+import { type FormEvent, useRef, useState } from "react";
+
 export function TextInput() {
-  return (
-    <p>
-      <label htmlFor="input__text">Text-Feld</label>{" "}
-      <input id="input__text" type="text" required placeholder="Hallo!" />
-    </p>
-  );
+	const [value, setValue] = useState("");
+	const ref = useRef<HTMLInputElement>(null);
+
+	const handleInput = (event: FormEvent<HTMLInputElement>) => {
+		setValue(event.currentTarget.value);
+	};
+
+	const isValid = ref.current?.validity.valid;
+
+	return (
+		<p>
+			<label htmlFor="text">Text-Feld</label>{" "}
+			<input
+				ref={ref}
+				id="text"
+				type="text"
+				placeholder="Hallo!"
+				required
+				value={value}
+				onInput={handleInput}
+			/>{" "}
+			{isValid && "✅"}
+		</p>
+	);
 }

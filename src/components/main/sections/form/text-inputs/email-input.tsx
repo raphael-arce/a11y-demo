@@ -1,18 +1,36 @@
+import { type FormEvent, useRef, useState } from "react";
+
 export function EmailInput() {
-  return (
-    <>
-      <p>
-        <label htmlFor="input__emailaddress">Email-Adresse</label>{" "}
-        <input
-          id="input__emailaddress"
-          type="email"
-          placeholder="name@email.com"
-        />{" "}
-        <span style={{ fontStyle: "italic", fontSize: "14px" }}>
-          Info: hier überprüft der Browser, ob die Eingabe richtig formatiert
-          ist.
-        </span>
-      </p>
-    </>
-  );
+	const [value, setValue] = useState("");
+	const ref = useRef<HTMLInputElement>(null);
+
+	const handleInput = (event: FormEvent<HTMLInputElement>) => {
+		setValue(event.currentTarget.value);
+	};
+
+	const isValid = ref.current?.validity.valid;
+
+	return (
+		<>
+			<p style={{ marginBottom: "8px" }}>
+				<label htmlFor="email">Email-Adresse</label>{" "}
+				<input
+					ref={ref}
+					id="email"
+					type="email"
+					placeholder="name@email.com"
+					required
+					value={value}
+					onInput={handleInput}
+				/>{" "}
+				{isValid && "✅"}
+			</p>
+			<p style={{ marginTop: "8px" }}>
+				<i>
+					Hinweis: der Browser überprüft ob die Eingabe einem Email-Format
+					entspricht.
+				</i>
+			</p>
+		</>
+	);
 }
