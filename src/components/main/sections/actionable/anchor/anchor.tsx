@@ -1,5 +1,6 @@
 import { EnterKbd } from "../../../../primitives/enter-kbd.tsx";
 import { useState } from "react";
+import { ReminderPressTab } from "../../../../primitives/reminder-press-tab.tsx";
 
 export function Anchor() {
 	const [firstLinkClicked, setFirstLinkClicked] = useState(false);
@@ -19,8 +20,8 @@ export function Anchor() {
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Drücke die <EnterKbd />
-					-Taste auf die folgenden Links:
+					<ReminderPressTab /> und drücke die <EnterKbd />
+					-Taste:
 				</p>
 				<ul>
 					<li>

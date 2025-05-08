@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { SpaceKbd } from "../../../../primitives/space-kbd.tsx";
 import { EnterKbd } from "../../../../primitives/enter-kbd.tsx";
+import { ReminderPressTab } from "../../../../primitives/reminder-press-tab.tsx";
 
 export function Button() {
 	const [count, setCount] = useState(0);
@@ -21,10 +21,9 @@ export function Button() {
 
 			<fieldset>
 				<legend>Aufgabe</legend>
-				{/* prettier-ignore */}
 				<p>
-					Drücke die <SpaceKbd />-Taste oder die <EnterKbd />-Taste
-					auf dem Button bis der Zählerstand 3 erreicht.
+					<ReminderPressTab /> und drücke die <EnterKbd />
+					-Taste bis der Zählerstand 3 erreicht.
 				</p>
 				<button onClick={increment} style={{ padding: "2px 10px" }}>
 					+1

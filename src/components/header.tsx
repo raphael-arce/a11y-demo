@@ -92,11 +92,6 @@ export function Header() {
 
 			<div style={{ height: "px" }} />
 
-			<p>
-				Springe jetzt zum nächsten interaktivem Element mit der <TabKbd />
-				-Taste.
-			</p>
-
 			<hr />
 		</header>
 	);

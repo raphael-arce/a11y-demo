@@ -7,7 +7,6 @@ import { SearchInput } from "./text-inputs/search-input.tsx";
 import { NumberInput } from "./text-inputs/number-input.tsx";
 import { Checkbox } from "./choice-inputs//checkbox/checkbox.tsx";
 import { Radio } from "./choice-inputs//radio/radio.tsx";
-import { InstructionsLink } from "../../../primitives/instructions-link.tsx";
 import { TextAreaInput } from "./text-inputs/text-area-input.tsx";
 import { RangeInput } from "./choice-inputs/range/range-input.tsx";
 import { ColorInput } from "./choice-inputs/color/color-input.tsx";
@@ -21,6 +20,7 @@ import { EnterKbd } from "../../../primitives/enter-kbd.tsx";
 import { LeftKbd } from "../../../primitives/left-kbd.tsx";
 import { RightKbd } from "../../../primitives/right-kbd.tsx";
 import { ShiftKbd } from "../../../primitives/shift-kbd.tsx";
+import { ReminderPressTab } from "../../../primitives/reminder-press-tab.tsx";
 
 export function Form() {
 	return (
@@ -36,8 +36,7 @@ export function Form() {
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Fülle alle Felder aus. Beachte das Format der Eingabe, das wird bei
-					manchen Feldern überprüft.
+					<ReminderPressTab /> und fülle alle Felder aus.
 				</p>
 				<TextInput />
 				<PasswordInput />
@@ -48,10 +47,6 @@ export function Form() {
 				<NumberInput />
 				<UrlInput />
 			</fieldset>
-
-			<p>
-				<InstructionsLink />
-			</p>
 
 			<h3>Auswahlartige Felder</h3>
 
@@ -65,52 +60,41 @@ export function Form() {
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Drücke auf <SpaceKbd /> um eine Checkbox anzukreuzen (oder das Häkchen
-					wieder zu entfernen). Setze ein Häkchen bei allen Checkboxen.
+					<ReminderPressTab /> und drücke auf <SpaceKbd /> um ein Häkchen zu
+					setzen (oder es wieder zu entfernen). Setze ein Häkchen bei allen
+					Checkboxen.
 				</p>
 				<Checkbox />
 			</fieldset>
-
-			<p>
-				<InstructionsLink />
-			</p>
 
 			<h4>Radio-Buttons</h4>
 
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Drücke auf eine Pfeiltaste <UpKbd />, <DownKbd />, <LeftKbd />,{" "}
-					<RightKbd /> um eine Auswahl zu treffen.
+					<ReminderPressTab /> und drücke auf eine Pfeiltaste <UpKbd />,{" "}
+					<DownKbd />, <LeftKbd />, <RightKbd /> um eine Auswahl zu treffen.
 				</p>
 				<Radio />
 			</fieldset>
-
-			<p>
-				<InstructionsLink />
-			</p>
 
 			<h4>Range-Input (Schieberegler)</h4>
 
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Drücke auf eine Pfeiltaste <UpKbd />, <DownKbd />, <LeftKbd />,{" "}
-					<RightKbd /> um den Regler zu verschieben.
+					<ReminderPressTab /> und drücke auf eine Pfeiltaste <UpKbd />,{" "}
+					<DownKbd />, <LeftKbd />, <RightKbd /> um den Regler zu verschieben.
 				</p>
 				<RangeInput />
 			</fieldset>
-
-			<p>
-				<InstructionsLink />
-			</p>
 
 			<h4>Select-Elemente</h4>
 
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Bediene das Select-Element und wähle eine Option:
+					<ReminderPressTab /> und wähle eine Option:
 					<ul>
 						<li>
 							Drücke <SpaceKbd /> um das Auswahlmenü zu öffnen,
@@ -130,7 +114,7 @@ export function Form() {
 				<hr />
 
 				<p>
-					Bediene das Multi-Select-Element und wähle mehrere Optionen:
+					<ReminderPressTab /> und wähle mehrere Optionen:
 					<ul>
 						<li>
 							Drücke auf die Pfeiltasten <UpKbd />, <DownKbd />, um eine Option
@@ -145,17 +129,13 @@ export function Form() {
 				<MultiSelect />
 			</fieldset>
 
-			<p>
-				<InstructionsLink />
-			</p>
-
 			<h4>Datum-Feld</h4>
 
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Drücke auf die Pfeiltasten <UpKbd />, <DownKbd />, <LeftKbd />,{" "}
-					<RightKbd /> um das Datum zu ändern.
+					<ReminderPressTab /> und drücke auf die Pfeiltasten <UpKbd />,{" "}
+					<DownKbd />, <LeftKbd />, <RightKbd /> um das Datum zu ändern.
 				</p>
 				<DateInput />
 				<p>
@@ -167,23 +147,16 @@ export function Form() {
 				</p>
 			</fieldset>
 
-			<p>
-				<InstructionsLink />
-			</p>
-
 			<h4>Farb-Feld</h4>
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					Drücke auf die <SpaceKbd />
+					<ReminderPressTab /> und drücke auf die <SpaceKbd />
 					-Taste um das Farbauswahlmenü zu öffnen und wähle eine Farbe aus.
 				</p>
 
 				<ColorInput />
 			</fieldset>
-			<p>
-				<InstructionsLink />
-			</p>
 		</section>
 	);
 }

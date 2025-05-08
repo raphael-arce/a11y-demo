@@ -9,7 +9,7 @@ export function Kbd({ children }: { children: ReactNode | string }) {
 				border: "1px solid #b4b4b4",
 				boxShadow: `
 		0 1px 1px rgba(0, 0, 0, 0.2),
-		0 2px 0 0 rgba(255, 255, 255, 0.7) inset`,
+		0 2px 0 0 rgba(255, 255, 255, 0.7)`,
 				color: "#333",
 				display: "inline-block",
 				fontSize: "0.8rem",
