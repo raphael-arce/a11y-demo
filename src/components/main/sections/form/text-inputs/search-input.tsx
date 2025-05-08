@@ -12,7 +12,12 @@ export function SearchInput() {
 
 	return (
 		<p>
-			<label htmlFor="search">Such-Feld</label>{" "}
+			<label
+				htmlFor="search"
+				style={{ width: "110px", display: "inline-block" }}
+			>
+				Such-Feld:
+			</label>{" "}
 			<input
 				ref={ref}
 				id="search"

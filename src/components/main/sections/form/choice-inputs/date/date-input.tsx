@@ -1,6 +1,6 @@
 import { type FormEvent, useRef, useState } from "react";
 
-export function TextInput() {
+export function DateInput() {
 	const [value, setValue] = useState("");
 	const ref = useRef<HTMLInputElement>(null);
 
@@ -12,14 +12,11 @@ export function TextInput() {
 
 	return (
 		<p>
-			<label htmlFor="text" style={{ width: "110px", display: "inline-block" }}>
-				Text-Feld:
-			</label>{" "}
+			<label htmlFor="date">Date input: </label>
 			<input
 				ref={ref}
-				id="text"
-				type="text"
-				placeholder="Hallo!"
+				type="date"
+				id="date"
 				required
 				value={value}
 				onInput={handleInput}

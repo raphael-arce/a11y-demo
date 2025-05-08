@@ -5,135 +5,185 @@ import { EmailInput } from "./text-inputs/email-input.tsx";
 import { TelInput } from "./text-inputs/tel-input.tsx";
 import { SearchInput } from "./text-inputs/search-input.tsx";
 import { NumberInput } from "./text-inputs/number-input.tsx";
-import { Select } from "./select/select.tsx";
-import { Checkbox } from "./checkbox/checkbox.tsx";
-import { Radio } from "./radio/radio.tsx";
+import { Checkbox } from "./choice-inputs//checkbox/checkbox.tsx";
+import { Radio } from "./choice-inputs//radio/radio.tsx";
 import { InstructionsLink } from "../../../primitives/instructions-link.tsx";
+import { TextAreaInput } from "./text-inputs/text-area-input.tsx";
+import { RangeInput } from "./choice-inputs/range/range-input.tsx";
+import { ColorInput } from "./choice-inputs/color/color-input.tsx";
+import { DateInput } from "./choice-inputs/date/date-input.tsx";
+import { SingleSelect } from "./choice-inputs/selects/single-select.tsx";
+import { MultiSelect } from "./choice-inputs/selects/multi-select.tsx";
+import { SpaceKbd } from "../../../primitives/space-kbd.tsx";
+import { UpKbd } from "../../../primitives/up-kbd.tsx";
+import { DownKbd } from "../../../primitives/down-kbd.tsx";
+import { EnterKbd } from "../../../primitives/enter-kbd.tsx";
+import { LeftKbd } from "../../../primitives/left-kbd.tsx";
+import { RightKbd } from "../../../primitives/right-kbd.tsx";
+import { ShiftKbd } from "../../../primitives/shift-kbd.tsx";
 
 export function Form() {
 	return (
 		<section>
 			<h2>Formular-Elemente</h2>
 
-			<form>
+			<h3>Textartige Felder</h3>
+			<p>
+				Bei den folgenden Eingabe-Feldern kann man direkt Text mit der Tastatur
+				eingeben.
+			</p>
+
+			<fieldset>
+				<legend>Aufgabe</legend>
 				<p>
-					Bei den folgenden Eingabe-Feldern kann man direkt Text mit der
-					Tastatur eingeben. Fülle alle Felder aus.
+					Fülle alle Felder aus. Beachte das Format der Eingabe, das wird bei
+					manchen Feldern überprüft.
 				</p>
-				<fieldset>
-					<legend>Aufgabe</legend>
-					<TextInput />
-					<PasswordInput />
-					<TelInput />
-					<SearchInput />
-					<EmailInput />
-					<NumberInput />
-					<UrlInput />
-				</fieldset>
+				<TextInput />
+				<PasswordInput />
+				<TelInput />
+				<SearchInput />
+				<TextAreaInput />
+				<EmailInput />
+				<NumberInput />
+				<UrlInput />
+			</fieldset>
+
+			<p>
+				<InstructionsLink />
+			</p>
+
+			<h3>Auswahlartige Felder</h3>
+
+			<p>
+				Bei den folgenden Eingabe-Feldern muss man unterschiedliche Tasten
+				verwenden, um Werte einzugeben.
+			</p>
+
+			<h4>Checkboxen</h4>
+
+			<fieldset>
+				<legend>Aufgabe</legend>
+				<p>
+					Drücke auf <SpaceKbd /> um eine Checkbox anzukreuzen (oder das Häkchen
+					wieder zu entfernen). Setze ein Häkchen bei allen Checkboxen.
+				</p>
+				<Checkbox />
+			</fieldset>
+
+			<p>
+				<InstructionsLink />
+			</p>
+
+			<h4>Radio-Buttons</h4>
+
+			<fieldset>
+				<legend>Aufgabe</legend>
+				<p>
+					Drücke auf eine Pfeiltaste <UpKbd />, <DownKbd />, <LeftKbd />,{" "}
+					<RightKbd /> um eine Auswahl zu treffen.
+				</p>
+				<Radio />
+			</fieldset>
+
+			<p>
+				<InstructionsLink />
+			</p>
+
+			<h4>Range-Input (Schieberegler)</h4>
+
+			<fieldset>
+				<legend>Aufgabe</legend>
+				<p>
+					Drücke auf eine Pfeiltaste <UpKbd />, <DownKbd />, <LeftKbd />,{" "}
+					<RightKbd /> um den Regler zu verschieben.
+				</p>
+				<RangeInput />
+			</fieldset>
+
+			<p>
+				<InstructionsLink />
+			</p>
+
+			<h4>Select-Elemente</h4>
+
+			<fieldset>
+				<legend>Aufgabe</legend>
+				<p>
+					Bediene das Select-Element und wähle eine Option:
+					<ul>
+						<li>
+							Drücke <SpaceKbd /> um das Auswahlmenü zu öffnen,
+						</li>
+						<li>
+							mit den Pfeiltasten <UpKbd /> und <DownKbd /> kann man die
+							Optionen durchblättern, und
+						</li>
+						<li>
+							mit der <EnterKbd />
+							-Taste die Auswahl bestätigen.
+						</li>
+					</ul>
+				</p>
+				<SingleSelect />
+
+				<hr />
 
 				<p>
-					<InstructionsLink />
+					Bediene das Multi-Select-Element und wähle mehrere Optionen:
+					<ul>
+						<li>
+							Drücke auf die Pfeiltasten <UpKbd />, <DownKbd />, um eine Option
+							auszuwählen,
+						</li>
+						<li>
+							mit der <ShiftKbd />
+							-Taste können mehrere Optionen ausgewählt werden.
+						</li>
+					</ul>
+				</p>
+				<MultiSelect />
+			</fieldset>
+
+			<p>
+				<InstructionsLink />
+			</p>
+
+			<h4>Datum-Feld</h4>
+
+			<fieldset>
+				<legend>Aufgabe</legend>
+				<p>
+					Drücke auf die Pfeiltasten <UpKbd />, <DownKbd />, <LeftKbd />,{" "}
+					<RightKbd /> um das Datum zu ändern.
+				</p>
+				<DateInput />
+				<p>
+					<i>
+						Hinweis: Mit der <SpaceKbd />
+						-Taste öffnet sich ein Menü, was die Auswahl erleichtern kann. Es
+						können auch auch direkt die Zahlen mit der Tastatur eingeben werden.
+					</i>
+				</p>
+			</fieldset>
+
+			<p>
+				<InstructionsLink />
+			</p>
+
+			<h4>Farb-Feld</h4>
+			<fieldset>
+				<legend>Aufgabe</legend>
+				<p>
+					Drücke auf die <SpaceKbd />
+					-Taste um das Farbauswahlmenü zu öffnen und wähle eine Farbe aus.
 				</p>
 
-				<fieldset id="forms__select">
-					<legend>Auswahl-Menus</legend>
-					<Select />
-				</fieldset>
-				<p>
-					<InstructionsLink />
-				</p>
-				<fieldset id="forms__checkbox">
-					<legend>Checkboxen (Auswahlkasten)</legend>
-					<Checkbox />
-				</fieldset>
-				<p>
-					<InstructionsLink />
-				</p>
-				<fieldset id="forms__radio">
-					<legend>Radio buttons</legend>
-					<Radio />
-				</fieldset>
-				<p>
-					<InstructionsLink />
-				</p>
-				<fieldset id="forms__textareas">
-					<legend>Textareas</legend>
-					<p>
-						<label htmlFor="textarea">Textarea</label>
-						<textarea
-							id="textarea"
-							rows={8}
-							cols={48}
-							placeholder="Enter your message here"
-						></textarea>
-					</p>
-				</fieldset>
-				<p>
-					<InstructionsLink />
-				</p>
-				<fieldset id="forms__html5">
-					<legend>HTML5 inputs</legend>
-					<p>
-						<label htmlFor="ic">Color input</label>
-						<input type="color" id="ic" defaultValue="#000000" />
-					</p>
-					<p>
-						<label htmlFor="ir">Range input</label>
-						<input type="range" id="ir" defaultValue="10" />
-					</p>
-					<p>
-						<label htmlFor="idd">Date input</label>
-						<input type="date" id="idd" defaultValue="1970-01-01" />
-					</p>
-					<p>
-						<label htmlFor="idm">Month input</label>
-						<input type="month" id="idm" defaultValue="1970-01" />
-					</p>
-					<p>
-						<label htmlFor="idw">Week input</label>
-						<input type="week" id="idw" defaultValue="1970-W01" />
-					</p>
-					<p>
-						<label htmlFor="idt">Datetime input</label>
-						<input
-							type="datetime"
-							id="idt"
-							defaultValue="1970-01-01T00:00:00Z"
-						/>
-					</p>
-					<p>
-						<label htmlFor="idtl">Datetime-local input</label>
-						<input
-							type="datetime-local"
-							id="idtl"
-							defaultValue="1970-01-01T00:00"
-						/>
-					</p>
-				</fieldset>
-				<p>
-					<InstructionsLink />
-				</p>
-				<fieldset id="forms__action">
-					<legend>Action buttons</legend>
-					<p>
-						<input type="submit" value="<input type=submit>" />
-						<input type="button" value="<input type=button>" />
-						<input type="reset" value="<input type=reset>" />
-						<input type="submit" value="<input disabled>" disabled />
-					</p>
-					<p>
-						<button type="submit">&lt;button type=submit&gt;</button>
-						<button type="button">&lt;button type=button&gt;</button>
-						<button type="reset">&lt;button type=reset&gt;</button>
-						<button type="button" disabled>
-							&lt;button disabled&gt;
-						</button>
-					</p>
-				</fieldset>
-				<p>
-					<InstructionsLink />
-				</p>
-			</form>
+				<ColorInput />
+			</fieldset>
+			<p>
+				<InstructionsLink />
+			</p>
 		</section>
 	);
 }

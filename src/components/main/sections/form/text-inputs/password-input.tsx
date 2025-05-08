@@ -12,7 +12,12 @@ export function PasswordInput() {
 
 	return (
 		<p>
-			<label htmlFor="password">Passwort</label>{" "}
+			<label
+				htmlFor="password"
+				style={{ width: "110px", display: "inline-block" }}
+			>
+				Passwort-Feld:
+			</label>{" "}
 			<input
 				ref={ref}
 				id="password"

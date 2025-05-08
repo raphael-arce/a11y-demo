@@ -12,7 +12,9 @@ export function TelInput() {
 
 	return (
 		<p>
-			<label htmlFor="tel">Telefonnummer</label>{" "}
+			<label htmlFor="tel" style={{ width: "110px", display: "inline-block" }}>
+				Telefonnummer:
+			</label>{" "}
 			<input
 				ref={ref}
 				id="tel"
