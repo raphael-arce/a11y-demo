@@ -1,3 +1,7 @@
 export function InstructionsLink() {
-	return <a href="#instructions">[Zur Anleitung springen]</a>;
+	return (
+		<p>
+			[<a href="#instructions">Zur Anleitung springen</a>]
+		</p>
+	);
 }
