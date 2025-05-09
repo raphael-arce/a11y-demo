@@ -95,37 +95,37 @@ export function Form() {
 				<legend>Aufgabe</legend>
 				<p>
 					<ReminderPressTab /> und wähle eine Option:
-					<ul>
-						<li>
-							Drücke <SpaceKbd /> um das Auswahlmenü zu öffnen,
-						</li>
-						<li>
-							mit den Pfeiltasten <UpKbd /> und <DownKbd /> kann man die
-							Optionen durchblättern, und
-						</li>
-						<li>
-							mit der <EnterKbd />
-							-Taste die Auswahl bestätigen.
-						</li>
-					</ul>
 				</p>
+				<ul>
+					<li>
+						Drücke <SpaceKbd /> um das Auswahlmenü zu öffnen,
+					</li>
+					<li>
+						mit den Pfeiltasten <UpKbd /> und <DownKbd /> kann man die Optionen
+						durchblättern, und
+					</li>
+					<li>
+						mit der <EnterKbd />
+						-Taste die Auswahl bestätigen.
+					</li>
+				</ul>
 				<SingleSelect />
 
 				<hr />
 
 				<p>
 					<ReminderPressTab /> und wähle mehrere Optionen:
-					<ul>
-						<li>
-							Drücke auf die Pfeiltasten <UpKbd />, <DownKbd />, um eine Option
-							auszuwählen,
-						</li>
-						<li>
-							mit der <ShiftKbd />
-							-Taste können mehrere Optionen ausgewählt werden.
-						</li>
-					</ul>
 				</p>
+				<ul>
+					<li>
+						Drücke auf die Pfeiltasten <UpKbd />, <DownKbd />, um eine Option
+						auszuwählen,
+					</li>
+					<li>
+						mit der <ShiftKbd />
+						-Taste können mehrere Optionen ausgewählt werden.
+					</li>
+				</ul>
 				<MultiSelect />
 			</fieldset>
 
@@ -152,11 +152,14 @@ export function Form() {
 				<legend>Aufgabe</legend>
 				<p>
 					<ReminderPressTab /> und drücke auf die <SpaceKbd />
-					-Taste um das Farbauswahlmenü zu öffnen und wähle eine Farbe aus.
+					-Taste um das Farbauswahlmenü zu öffnen. Wähle dann eine Farbe aus.
 				</p>
 
 				<ColorInput />
 			</fieldset>
+
+			<br />
+			<hr />
 		</section>
 	);
 }

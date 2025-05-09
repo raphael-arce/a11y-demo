@@ -3,7 +3,7 @@ import { type FormEvent, useState } from "react";
 export function Radio() {
 	const [value, setValue] = useState("");
 
-	const handleInput = (event: FormEvent<HTMLInputElement>) => {
+	const handleChange = (event: FormEvent<HTMLInputElement>) => {
 		setValue(event.currentTarget.value);
 	};
 
@@ -20,7 +20,7 @@ export function Radio() {
 					className="radio"
 					value="radio1"
 					checked={value === "radio1"}
-					onInput={handleInput}
+					onChange={handleChange}
 				/>
 				Option 1
 			</label>
@@ -32,7 +32,7 @@ export function Radio() {
 					className="radio"
 					value="radio2"
 					checked={value === "radio2"}
-					onInput={handleInput}
+					onChange={handleChange}
 				/>
 				Option 2
 			</label>
@@ -44,7 +44,7 @@ export function Radio() {
 					className="radio"
 					value="radio3"
 					checked={value === "radio3"}
-					onInput={handleInput}
+					onChange={handleChange}
 				/>
 				Option 3
 			</label>{" "}

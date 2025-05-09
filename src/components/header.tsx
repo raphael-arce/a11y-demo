@@ -13,13 +13,13 @@ export function Header() {
 		<header id="top" role="banner">
 			<h1>Barrierefreiheit im Web</h1>
 			<p>
-				Auf dieser Seite befinden sich alle interaktiven HTML-Elemente (Links,
-				Buttons, Eingabefelder usw.).
+				Diese Seite enthält interaktive HTML-Elemente wie Links, Buttons,
+				Eingabefelder und mehr.
 			</p>
 
 			<p>
-				Ziel ist es, zu lernen wie man Webseiten ausschließlich mit der Tastatur
-				bedient.
+				Ziel ist es, zu lernen, wie man Webseiten ausschließlich mit der
+				Tastatur bedient.
 			</p>
 
 			<p>
@@ -41,7 +41,7 @@ export function Header() {
 			<h3>Kurzbefehle</h3>
 			<p>
 				<i>
-					Hinweis: manche Tasten führen je nach Kontext unterschiedliche
+					Hinweis: Manche Tasten führen je nach Kontext unterschiedliche
 					Aktionen aus, zum Beispiel wenn gerade ein Element
 					ausgewählt/fokussiert ist oder nicht.
 				</i>
@@ -82,15 +82,13 @@ export function Header() {
 					klicken, eine Checkbox ankreuzen)
 				</li>
 				<li>
-					<UpKbd />, <DownKbd />, <LeftKbd />, <RightKbd /> - die Auswahl von
-					einem Element ändern (z.B. ein Radio-Element oder ein Select-Element)
+					<UpKbd />, <DownKbd />, <LeftKbd />, <RightKbd /> - Den Wert eines
+					Elementes ändern (z.B. ein Radio-Element oder ein Select-Element)
 				</li>
 				<li>
-					<EscapeKbd /> - Ein Element schließen (z.B. einen Modal)
+					<EscapeKbd /> - Ein Element schließen (z.B. ein Modal)
 				</li>
 			</ul>
-
-			<div style={{ height: "px" }} />
 
 			<hr />
 		</header>
