@@ -21,7 +21,7 @@ export function OtherInteractiveElements() {
 					</p>
 					<p>
 						<i>
-							Hinweis: Solange das Audio Element fokussiert ist, werden die
+							Hinweis: Solange das Audio-Element fokussiert ist, werden die
 							Pfeiltasten für die Lautstärke-Regelung verwendet. Drücke die{" "}
 							<TabKbd />
 							-Taste um das nächste Element zu fokussieren.
@@ -39,7 +39,7 @@ export function OtherInteractiveElements() {
 					</p>
 					<p>
 						<i>
-							Hinweis: Solange das Audio Element fokussiert ist, werden die
+							Hinweis: Solange das Video-Element fokussiert ist, werden die
 							Pfeiltasten für die Lautstärke-Regelung verwendet. Drücke die{" "}
 							<TabKbd />
 							-Taste um das nächste Element zu fokussieren.

@@ -60,7 +60,7 @@ export function Form() {
 			<fieldset>
 				<legend>Aufgabe</legend>
 				<p>
-					<ReminderPressTab /> und drücke auf <SpaceKbd /> um ein Häkchen zu
+					<ReminderPressTab /> und drücke auf <SpaceKbd />, um ein Häkchen zu
 					setzen (oder es wieder zu entfernen). Setze ein Häkchen bei allen
 					Checkboxen.
 				</p>
@@ -73,7 +73,7 @@ export function Form() {
 				<legend>Aufgabe</legend>
 				<p>
 					<ReminderPressTab /> und drücke auf eine Pfeiltaste <UpKbd />,{" "}
-					<DownKbd />, <LeftKbd />, <RightKbd /> um eine Auswahl zu treffen.
+					<DownKbd />, <LeftKbd />, <RightKbd />, um eine Auswahl zu treffen.
 				</p>
 				<Radio />
 			</fieldset>
@@ -84,7 +84,7 @@ export function Form() {
 				<legend>Aufgabe</legend>
 				<p>
 					<ReminderPressTab /> und drücke auf eine Pfeiltaste <UpKbd />,{" "}
-					<DownKbd />, <LeftKbd />, <RightKbd /> um den Regler zu verschieben.
+					<DownKbd />, <LeftKbd />, <RightKbd />, um den Regler zu verschieben.
 				</p>
 				<RangeInput />
 			</fieldset>
@@ -135,14 +135,14 @@ export function Form() {
 				<legend>Aufgabe</legend>
 				<p>
 					<ReminderPressTab /> und drücke auf die Pfeiltasten <UpKbd />,{" "}
-					<DownKbd />, <LeftKbd />, <RightKbd /> um das Datum zu ändern.
+					<DownKbd />, <LeftKbd />, <RightKbd />, um das Datum zu ändern.
 				</p>
 				<DateInput />
 				<p>
 					<i>
 						Hinweis: Mit der <SpaceKbd />
 						-Taste öffnet sich ein Menü, was die Auswahl erleichtern kann. Es
-						können auch auch direkt die Zahlen mit der Tastatur eingeben werden.
+						können auch direkt die Zahlen mit der Tastatur eingegeben werden.
 					</i>
 				</p>
 			</fieldset>
@@ -152,7 +152,7 @@ export function Form() {
 				<legend>Aufgabe</legend>
 				<p>
 					<ReminderPressTab /> und drücke auf die <SpaceKbd />
-					-Taste um das Farbauswahlmenü zu öffnen. Wähle dann eine Farbe aus.
+					-Taste, um das Farbauswahlmenü zu öffnen. Wähle dann eine Farbe aus.
 				</p>
 
 				<ColorInput />
