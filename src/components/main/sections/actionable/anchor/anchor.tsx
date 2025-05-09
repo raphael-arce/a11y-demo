@@ -36,11 +36,10 @@ export function Anchor() {
 					</li>
 
 					<li>
-						[
 						<a href="#instructions" onClick={() => setSecondLinkClicked(true)}>
-							Zur Anleitung springen
-						</a>
-						] {secondLinkClicked && "✅"}
+							Zurück zur Anleitung springen
+						</a>{" "}
+						{secondLinkClicked && "✅"}
 					</li>
 
 					<li>

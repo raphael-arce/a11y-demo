@@ -7,6 +7,8 @@ export function ActionableSection() {
 			<h2>Klickbare Elemente</h2>
 			<Anchor />
 			<Button />
+			<br />
+			<hr />
 		</section>
 	);
 }
