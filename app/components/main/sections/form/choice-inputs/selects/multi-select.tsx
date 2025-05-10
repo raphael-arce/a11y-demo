@@ -19,9 +19,9 @@ export function MultiSelect() {
 	return (
 		<>
 			<p style={{ display: "flex", alignItems: "start", gap: "4px" }}>
-				<label htmlFor="select">Mehrfache Auswahl: </label>
+				<label htmlFor="multi-select">Mehrfache Auswahl: </label>
 				<select
-					id="select"
+					id="multi-select"
 					multiple
 					required
 					value={values}
