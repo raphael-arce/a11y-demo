@@ -124,8 +124,8 @@ export default function Index() {
 				<div>
 					<hr />
 					<p>
-						Geschafft! 🥳 Du hast jetzt zum ersten mal eine Webseite mit einem
-						Screen-Reader bedient. 🗣️
+						Geschafft! 🥳 Du hast jetzt eine Webseite mit einem Screen-Reader
+						bedient. 🗣️
 					</p>
 					<hr />
 				</div>
