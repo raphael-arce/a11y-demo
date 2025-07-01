@@ -119,20 +119,20 @@ export default function Index() {
 						<button type="submit">Termin vereinbaren</button>
 					</form>
 				</section>
+				<br />
+
+				<div>
+					<hr />
+					<p>
+						Geschafft! 🥳 Du hast jetzt zum ersten mal eine Webseite mit einem
+						Screen-Reader bedient. 🗣️
+					</p>
+					<hr />
+				</div>
+
+				<br />
 			</main>
 			<footer>
-				<br />
-				{isVisible && (
-					<>
-						<hr />
-						<p>
-							Geschafft! 🥳 Du hast jetzt zum ersten mal eine Webseite mit einem
-							Screen-Reader bedient. 🗣️
-						</p>
-						<hr />
-					</>
-				)}
-				<br />
 				<br />
 				<p>
 					© Raphael Arce,{" "}
