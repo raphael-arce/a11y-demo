@@ -120,6 +120,24 @@ export default function Index() {
 					</form>
 				</section>
 			</main>
+			<footer>
+				<br />
+				<hr />
+				<p>
+					Geschafft! 🥳 Du hast jetzt zum ersten mal eine Webseite mit einem
+					Screen-Reader bedient. 🗣️
+				</p>
+				<hr />
+				<br />
+				<br />
+				<p>
+					© Raphael Arce,{" "}
+					<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>,{" "}
+					<a href="https://github.com/raphael-arce/a11y-demo">
+						Link zum Quellcode
+					</a>
+				</p>
+			</footer>
 		</div>
 	);
 }
