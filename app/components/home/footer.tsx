@@ -4,8 +4,14 @@ export function Footer() {
 			<br />
 			<hr />
 			<p>
-				Geschafft! 🥳 Du kannst jetzt Webseiten mit der Tastatur bedienen. ⌨️
+				Geschafft! 🥳 Du kannst jetzt Webseiten mit der Tastatur bedienen. ⌨️ Du
+				wirst damit viel schneller und effizienter arbeiten können.
 			</p>
+			<p>
+				Unter dem folgenden Link gelangst du zur Demo für Screen-Reader:{" "}
+				<a href={"/screen-reader/"}>Screen-Reader Demo</a>
+			</p>
+			<hr />
 			<br />
 			<br />
 			<p>

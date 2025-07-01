@@ -1,7 +1,7 @@
-import { Header } from "../components/header";
-import { Navigation } from "../components/navigation";
-import { Main } from "../components/main/main";
-import { Footer } from "../components/footer";
+import { Header } from "~/components/home/header";
+import { Navigation } from "~/components/home/navigation";
+import { Main } from "~/components/home/main/main";
+import { Footer } from "~/components/home/footer";
 
 export function meta() {
 	return [
