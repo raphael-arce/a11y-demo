@@ -122,12 +122,16 @@ export default function Index() {
 			</main>
 			<footer>
 				<br />
-				<hr />
-				<p>
-					Geschafft! 🥳 Du hast jetzt zum ersten mal eine Webseite mit einem
-					Screen-Reader bedient. 🗣️
-				</p>
-				<hr />
+				{isVisible && (
+					<>
+						<hr />
+						<p>
+							Geschafft! 🥳 Du hast jetzt zum ersten mal eine Webseite mit einem
+							Screen-Reader bedient. 🗣️
+						</p>
+						<hr />
+					</>
+				)}
 				<br />
 				<br />
 				<p>
