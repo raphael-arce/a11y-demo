@@ -104,19 +104,21 @@ export default function Index() {
 											type="radio"
 											id={`date-${index}`}
 											name="date"
-											// value={date.toString()}
+											value={date.toString()}
 											disabled={!isAvailable}
 											required={!isAvailable}
 										/>
-										{new Date(date).toLocaleDateString("de-DE", {
-											weekday: "long",
-											year: "numeric",
-											month: "long",
-											day: "numeric",
-											hour: "2-digit",
-											minute: "2-digit",
-										})}{" "}
-										({isAvailable ? "Verfügbar" : "Nicht verfügbar"})
+										<span aria-hidden>
+											{new Date(date).toLocaleDateString("de-DE", {
+												weekday: "long",
+												year: "numeric",
+												month: "long",
+												day: "numeric",
+												hour: "2-digit",
+												minute: "2-digit",
+											})}{" "}
+											({isAvailable ? "Verfügbar" : "Nicht verfügbar"})
+										</span>
 									</label>
 								);
 							})}
