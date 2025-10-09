@@ -15,7 +15,7 @@ export function EmailInput() {
 			<p style={{ marginBottom: "4px" }}>
 				<label
 					htmlFor="email"
-					style={{ width: "110px", display: "inline-block" }}
+					style={{ width: "120px", display: "inline-block" }}
 				>
 					Email-Feld:
 				</label>{" "}
@@ -28,13 +28,13 @@ export function EmailInput() {
 					value={value}
 					onInput={handleInput}
 				/>{" "}
-				{isValid && "✅"}
+				<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 			</p>
 			<p style={{ marginTop: "4px" }}>
-				<i>
+				<b>
 					Hinweis: der Browser überprüft ob die Eingabe einem Email-Format
 					entspricht.
-				</i>
+				</b>
 			</p>
 		</>
 	);

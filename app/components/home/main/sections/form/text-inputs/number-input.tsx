@@ -15,7 +15,7 @@ export function NumberInput() {
 			<p style={{ marginBottom: "4px" }}>
 				<label
 					htmlFor="number"
-					style={{ width: "110px", display: "inline-block" }}
+					style={{ width: "120px", display: "inline-block" }}
 				>
 					Zahlen-Feld:
 				</label>{" "}
@@ -28,12 +28,12 @@ export function NumberInput() {
 					value={value}
 					onInput={handleInput}
 				/>{" "}
-				{isValid && "✅"}
+				<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 			</p>
 			<p style={{ marginTop: "4px" }}>
-				<i>
+				<b>
 					Hinweis: der Browser überprüft ob die Eingabe nur aus Zahlen besteht.
-				</i>
+				</b>
 			</p>
 		</>
 	);

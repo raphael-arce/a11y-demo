@@ -15,7 +15,7 @@ export function UrlInput() {
 			<p style={{ marginBottom: "4px" }}>
 				<label
 					htmlFor="url"
-					style={{ width: "110px", display: "inline-block" }}
+					style={{ width: "120px", display: "inline-block" }}
 				>
 					URL-Feld:
 				</label>{" "}
@@ -28,13 +28,13 @@ export function UrlInput() {
 					value={value}
 					onInput={handleInput}
 				/>{" "}
-				{isValid && "✅"}
+				<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 			</p>
 			<p style={{ marginTop: "4px" }}>
-				<i>
+				<b>
 					Hinweis: der Browser überprüft ob die Eingabe dem URL-Format
 					entspricht.
-				</i>
+				</b>
 			</p>
 		</>
 	);

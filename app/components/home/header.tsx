@@ -7,11 +7,17 @@ import { EnterKbd } from "./primitives/enter-kbd";
 import { EscapeKbd } from "./primitives/escape-kbd";
 import { LeftKbd } from "./primitives/left-kbd";
 import { RightKbd } from "./primitives/right-kbd";
+import { LinkIcon } from "~/components/home/primitives/link-icon";
 
 export function Header() {
 	return (
 		<header id="top" role="banner">
-			<h1>Barrierefreiheit im Web</h1>
+			<h1>
+				Barrierefreiheit im Web{" "}
+				<a id="a11y-in-browsers" href={"#a11y-in-browsers"}>
+					<LinkIcon />
+				</a>
+			</h1>
 			<p>
 				Diese Seite enthält interaktive HTML-Elemente wie Links, Buttons,
 				Eingabefelder und mehr.
@@ -23,31 +29,56 @@ export function Header() {
 			</p>
 
 			<p>
-				<i>
+				<b>
 					Hinweis: Die Seite ist so programmiert, dass Maustasten und Mausrad
 					deaktiviert sind.
-				</i>
+				</b>
 			</p>
 
 			<hr />
 
-			<h2 id="instructions">Anleitung</h2>
-			<p>Aufgaben:</p>
+			<h2>
+				Anleitung{" "}
+				<a
+					id="instructions"
+					href={"#instructions"}
+					style={{
+						display: "flex",
+						alignItems: "center",
+					}}
+				>
+					<LinkIcon />
+				</a>
+			</h2>
+			<p>Deine Aufgaben sind:</p>
 			<ul>
-				<li>Alle Felder sollen ausgefüllt werden.</li>
-				<li>Alle interaktiven Elemente sollen einmal bedient werden.</li>
+				<li>Folgende interaktiven Elemente sollen bedient werden, und</li>
+				<li>Folgende Felder sollen ausgefüllt werden.</li>
 			</ul>
 
-			<h3>Kurzbefehle</h3>
+			<h3>
+				Kurzbefehle{" "}
+				<a id="shortcuts" href={"#shortcuts"}>
+					<LinkIcon />
+				</a>
+			</h3>
+
 			<p>
-				<i>
-					Hinweis: Manche Tasten führen je nach Kontext unterschiedliche
-					Aktionen aus, zum Beispiel wenn gerade ein Element
-					ausgewählt/fokussiert ist oder nicht.
-				</i>
+				Tasten können je nach Kontext unterschiedliche Aktionen ausführen, zum
+				Beispiel wenn gerade ein bestimmtes Element fokussiert ist oder nicht.
 			</p>
 
-			<h4>Ohne Fokus</h4>
+			<p>
+				<b>Hinweis: Die Tasten-Icons sind nicht fokussierbar.</b>
+			</p>
+
+			<h4>
+				Ohne Fokus{" "}
+				<a id="without-focus" href={"#without-focus"}>
+					<LinkIcon />
+				</a>
+			</h4>
+
 			<ul>
 				<li>
 					<DownKbd /> (Pfeiltaste nach unten) - Etwas nach unten scrollen
@@ -71,7 +102,13 @@ export function Header() {
 				</li>
 			</ul>
 
-			<h4>Mit Fokus</h4>
+			<h4>
+				Mit Fokus{" "}
+				<a id="with-focus" href={"#with-focus"}>
+					<LinkIcon />
+				</a>
+			</h4>
+
 			<ul>
 				<li>
 					<EnterKbd /> - Das fokussierte Element aktivieren (z.B. einen Link

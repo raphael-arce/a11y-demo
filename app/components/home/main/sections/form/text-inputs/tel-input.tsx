@@ -12,7 +12,7 @@ export function TelInput() {
 
 	return (
 		<p>
-			<label htmlFor="tel" style={{ width: "110px", display: "inline-block" }}>
+			<label htmlFor="tel" style={{ width: "120px", display: "inline-block" }}>
 				Telefonnummer:
 			</label>{" "}
 			<input
@@ -24,7 +24,7 @@ export function TelInput() {
 				value={value}
 				onInput={handleInput}
 			/>{" "}
-			{isValid && "✅"}
+			<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 		</p>
 	);
 }

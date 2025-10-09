@@ -1,13 +1,15 @@
 import { useState } from "react";
 
+const defaultValue = "2";
+
 export function RangeInput() {
-	const [value, setValue] = useState("0");
+	const [value, setValue] = useState(defaultValue);
 
 	const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
 		setValue(event.currentTarget.value);
 	};
 
-	const isValid = value !== "0";
+	const isValid = value !== defaultValue;
 
 	return (
 		<p style={{ display: "flex", alignItems: "center", gap: "6px" }}>
@@ -17,7 +19,7 @@ export function RangeInput() {
 				id="range"
 				required
 				min={0}
-				max={5}
+				max={4}
 				value={value}
 				onInput={handleInput}
 			/>{" "}

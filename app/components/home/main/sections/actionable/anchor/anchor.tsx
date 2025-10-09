@@ -1,6 +1,7 @@
 import { EnterKbd } from "../../../../primitives/enter-kbd";
 import { useState } from "react";
 import { ReminderPressTab } from "../../../../primitives/reminder-press-tab";
+import { LinkIcon } from "~/components/home/primitives/link-icon";
 
 export function Anchor() {
 	const [firstLinkClicked, setFirstLinkClicked] = useState(false);
@@ -9,7 +10,12 @@ export function Anchor() {
 
 	return (
 		<>
-			<h3>Links</h3>
+			<h3>
+				Links{" "}
+				<a id="links" href={"#links"}>
+					<LinkIcon />
+				</a>
+			</h3>
 
 			<p>
 				Mit Links kann man auf Webseiten oder bestimmte Elemente innerhalb einer
@@ -18,10 +24,12 @@ export function Anchor() {
 			</p>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und drücke die <EnterKbd />
-					-Taste:
+					<ReminderPressTab plural /> und die <EnterKbd />
+					-Taste zu drücken:
 				</p>
 				<ul>
 					<li>
@@ -44,10 +52,10 @@ export function Anchor() {
 
 					<li>
 						<a
-							href="mailto:raphael.arce@ts.berlin"
+							href="mailto:info@berlin.de"
 							onClick={() => setThirdLinkClicked(true)}
 						>
-							raphael.arce@ts.berlin
+							info@berlin.de
 						</a>{" "}
 						{thirdLinkClicked && "✅"}
 					</li>

@@ -33,7 +33,9 @@ export default function Index() {
 					Screen-Readern gelesen werden können.
 				</p>
 			</header>
-			<button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
+			{import.meta.env.DEV && (
+				<button onClick={() => setIsVisible(!isVisible)}>Toggle</button>
+			)}
 			<main
 				style={{
 					opacity: isVisible ? 1 : 0,
@@ -54,7 +56,10 @@ export default function Index() {
 							flexDirection: "column",
 							gap: "1rem",
 						}}
-						onSubmit={(e) => e.preventDefault()}
+						onSubmit={(e) => {
+							e.preventDefault();
+							setIsVisible(true);
+						}}
 					>
 						<fieldset
 							style={{
@@ -65,13 +70,13 @@ export default function Index() {
 						>
 							<legend>Kontaktdaten</legend>
 							<label htmlFor="name">
-								Name <input type="text" id="name" name="name" />
+								Name <input type="text" id="name" name="name" required />
 							</label>
 							<label htmlFor="email">
-								Email <input type="email" id="email" name="email" />
+								Email <input type="email" id="email" name="email" required />
 							</label>
 							<label htmlFor="phone">
-								Telefon <input type="tel" id="phone" name="phone" />
+								Telefon <input type="tel" id="phone" name="phone" required />
 							</label>
 						</fieldset>
 						<fieldset
@@ -101,6 +106,7 @@ export default function Index() {
 											name="date"
 											value={date.toString()}
 											disabled={!isAvailable}
+											required={!isAvailable}
 										/>
 										{new Date(date).toLocaleDateString("de-DE", {
 											weekday: "long",

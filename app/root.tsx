@@ -18,24 +18,39 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<link rel="icon" href="data:," />
 				<Meta />
 				<Links />
+				<style>
+					{`
+					body {
+						font-size: 18px;
+					}
+					h1, h2, h3, h4, h5, h6 {
+						display: flex;
+						gap: 6px;
+						align-items: center;
+					}
+					li {
+						line-height: 2;
+					}
+					`}
+				</style>
 			</head>
 			<body id="body">
 				{children}
 				<ScrollRestoration />
 				<Scripts />
-			</body>
-			<script type="module">{`
-				function disableWheelEvents() {
-					if (${import.meta.env.DEV}) {
-						return;
+				<script type="module">{`
+					function disableWheelEvents() {
+						if (${import.meta.env.DEV}) {
+							return;
+						}
+	
+						const body = document.getElementById("body");
+						body.addEventListener("wheel", (e) => e.preventDefault(), { passive: false,	});
 					}
-
-					const body = document.getElementById("body");
-					body.addEventListener("wheel", (e) => e.preventDefault(), { passive: false,	});
-				}
-
-				disableWheelEvents();
-			`}</script>
+	
+					disableWheelEvents();
+				`}</script>
+			</body>
 		</html>
 	);
 }

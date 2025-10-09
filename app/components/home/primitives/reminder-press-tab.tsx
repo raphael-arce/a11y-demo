@@ -1,10 +1,12 @@
 import { TabKbd } from "./tab-kbd";
 
-export function ReminderPressTab() {
+export function ReminderPressTab({ plural }: { plural: boolean }) {
+	const wording = plural ? "die nächsten Elemente" : "das nächste Element";
+
 	return (
 		<>
-			Fokussiere das nächste Element mit der <TabKbd />
-			-Taste
+			Deine Aufgabe ist es, {wording} mit der <TabKbd />
+			-Taste zu fokussieren
 		</>
 	);
 }

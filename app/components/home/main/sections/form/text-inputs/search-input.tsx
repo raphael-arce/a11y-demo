@@ -14,7 +14,7 @@ export function SearchInput() {
 		<p>
 			<label
 				htmlFor="search"
-				style={{ width: "110px", display: "inline-block" }}
+				style={{ width: "120px", display: "inline-block" }}
 			>
 				Such-Feld:
 			</label>{" "}
@@ -27,7 +27,7 @@ export function SearchInput() {
 				value={value}
 				onInput={handleInput}
 			/>{" "}
-			{isValid && "✅"}
+			<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 		</p>
 	);
 }

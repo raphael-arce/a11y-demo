@@ -14,7 +14,7 @@ export function TextAreaInput() {
 		<p style={{ display: "flex", alignItems: "start", gap: "4px" }}>
 			<label
 				htmlFor="textarea"
-				style={{ width: "110px", display: "inline-block" }}
+				style={{ width: "120px", display: "inline-block" }}
 			>
 				Textbereich:
 			</label>
@@ -33,7 +33,7 @@ export function TextAreaInput() {
 					fontSize: "13.5px",
 				}}
 			></textarea>{" "}
-			{isValid && "✅"}
+			<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 		</p>
 	);
 }

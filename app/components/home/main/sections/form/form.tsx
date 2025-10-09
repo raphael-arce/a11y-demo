@@ -21,22 +21,35 @@ import { LeftKbd } from "../../../primitives/left-kbd";
 import { RightKbd } from "../../../primitives/right-kbd";
 import { ShiftKbd } from "../../../primitives/shift-kbd";
 import { ReminderPressTab } from "../../../primitives/reminder-press-tab";
+import { LinkIcon } from "~/components/home/primitives/link-icon";
 
 export function Form() {
 	return (
 		<section>
-			<h2>Formular-Elemente</h2>
+			<h2>
+				Formular-Elemente
+				<a id="form-elements" href={"#form-elements"}>
+					<LinkIcon />
+				</a>
+			</h2>
 
-			<h3>Textartige Felder</h3>
+			<h3>
+				Textartige Felder{" "}
+				<a id="text-based-fields" href={"#text-based-fields"}>
+					<LinkIcon />
+				</a>
+			</h3>
 			<p>
 				Bei den folgenden Eingabe-Feldern kann man direkt Text mit der Tastatur
 				eingeben.
 			</p>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und fülle alle Felder aus.
+					<ReminderPressTab plural /> und alle Felder auszufüllen.
 				</p>
 				<TextInput />
 				<PasswordInput />
@@ -48,53 +61,104 @@ export function Form() {
 				<UrlInput />
 			</fieldset>
 
-			<h3>Auswahlartige Felder</h3>
+			<h3>
+				Auswahlartige Felder
+				<a id="choice-based-fields" href={"#choice-based-fields"}>
+					<LinkIcon />
+				</a>
+			</h3>
 
 			<p>
 				Bei den folgenden Eingabe-Feldern muss man unterschiedliche Tasten
 				verwenden, um Werte einzugeben.
 			</p>
 
-			<h4>Checkboxen</h4>
+			<h4>
+				Checkboxen{" "}
+				<a id="checkboxes" href={"#checkboxes"}>
+					<LinkIcon />
+				</a>
+			</h4>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und drücke auf <SpaceKbd />, um ein Häkchen zu
-					setzen (oder es wieder zu entfernen). Setze ein Häkchen bei allen
-					Checkboxen.
+					<ReminderPressTab plural /> und ein Häkchen auf allen Checkboxen zu
+					setzen.
+				</p>
+				<p>
+					<b>
+						Hinweis: Du kannst, nachdem das Element fokussiert ist, mit{" "}
+						<SpaceKbd /> Häkchen setzen oder sie wieder entfernen.
+					</b>
 				</p>
 				<Checkbox />
 			</fieldset>
 
-			<h4>Radio-Buttons</h4>
+			<h4>
+				Radio-Buttons{" "}
+				<a id="radio-buttons" href={"#radio-buttons"}>
+					<LinkIcon />
+				</a>
+			</h4>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und drücke auf eine Pfeiltaste <UpKbd />,{" "}
-					<DownKbd />, <LeftKbd />, <RightKbd />, um eine Auswahl zu treffen.
+					<ReminderPressTab plural={false} /> und eine Auswahl zu treffen.
+				</p>
+
+				<p>
+					<b>
+						Hinweis: Du kannst, nachdem das Element fokussiert ist, mit einer
+						Pfeiltaste <UpKbd />, <DownKbd />, <LeftKbd />, <RightKbd /> deine
+						Auswahl ändern.
+					</b>
 				</p>
 				<Radio />
 			</fieldset>
 
-			<h4>Range-Input (Schieberegler)</h4>
+			<h4>
+				Range-Input (Schieberegler)
+				<a id="range-inputs" href={"#range-inputs"}>
+					<LinkIcon />
+				</a>
+			</h4>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und drücke auf eine Pfeiltaste <UpKbd />,{" "}
-					<DownKbd />, <LeftKbd />, <RightKbd />, um den Regler zu verschieben.
+					<ReminderPressTab plural={false} /> und den Regler zu verschieben.
+				</p>
+				<p>
+					<b>
+						Hinweis: Du kannst, nachdem das Element fokussiert ist, mit einer
+						Pfeiltaste <UpKbd />, <DownKbd />, <LeftKbd />, <RightKbd /> den
+						Regler verschieben.
+					</b>
 				</p>
 				<RangeInput />
 			</fieldset>
 
-			<h4>Select-Elemente</h4>
+			<h4>
+				Select-Elemente{" "}
+				<a id="select-inputs" href={"#select-inputs"}>
+					<LinkIcon />
+				</a>
+			</h4>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und wähle eine Option:
+					<ReminderPressTab plural={false} /> und eine Option zu wählen:
 				</p>
 				<ul>
 					<li>
@@ -114,7 +178,7 @@ export function Form() {
 				<hr />
 
 				<p>
-					<ReminderPressTab /> und wähle mehrere Optionen:
+					<ReminderPressTab plural={false} /> und mehrere Optionen zu wählen:
 				</p>
 				<ul>
 					<li>
@@ -129,30 +193,52 @@ export function Form() {
 				<MultiSelect />
 			</fieldset>
 
-			<h4>Datum-Feld</h4>
+			<h4>
+				Datum-Feld{" "}
+				<a id="date-inputs" href={"#date-inputs"}>
+					<LinkIcon />
+				</a>
+			</h4>
 
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und drücke auf die Pfeiltasten <UpKbd />,{" "}
-					<DownKbd />, <LeftKbd />, <RightKbd />, um das Datum zu ändern.
+					<ReminderPressTab plural={false} /> und das Datum zu ändern.
 				</p>
-				<DateInput />
 				<p>
-					<i>
-						Hinweis: Mit der <SpaceKbd />
+					<b>
+						Hinweis: Du kannst, nachdem das Element fokussiert ist, mit den
+						Pfeiltasten <UpKbd />, <DownKbd />, <LeftKbd />, <RightKbd /> das
+						Datum ändern. Mit der <SpaceKbd />
 						-Taste öffnet sich ein Menü, was die Auswahl erleichtern kann. Es
 						können auch direkt die Zahlen mit der Tastatur eingegeben werden.
-					</i>
+					</b>
 				</p>
+
+				<DateInput />
 			</fieldset>
 
-			<h4>Farb-Feld</h4>
+			<h4>
+				Farb-Feld{" "}
+				<a id="color-inputs" href={"#color-inputs"}>
+					<LinkIcon />
+				</a>
+			</h4>
 			<fieldset>
-				<legend>Aufgabe</legend>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
 				<p>
-					<ReminderPressTab /> und drücke auf die <SpaceKbd />
-					-Taste, um das Farbauswahlmenü zu öffnen. Wähle dann eine Farbe aus.
+					<ReminderPressTab plural={false} /> und eine Farbe auszuwählen.
+				</p>
+				<p>
+					<b>
+						Hinweis: Du kannst, nachdem das Element fokussiert ist, die{" "}
+						<SpaceKbd />
+						-Taste drücken, um das Farbauswahlmenü zu öffnen.
+					</b>
 				</p>
 
 				<ColorInput />

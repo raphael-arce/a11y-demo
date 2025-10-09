@@ -12,7 +12,7 @@ export function TextInput() {
 
 	return (
 		<p>
-			<label htmlFor="text" style={{ width: "110px", display: "inline-block" }}>
+			<label htmlFor="text" style={{ width: "120px", display: "inline-block" }}>
 				Text-Feld:
 			</label>{" "}
 			<input
@@ -24,7 +24,7 @@ export function TextInput() {
 				value={value}
 				onInput={handleInput}
 			/>{" "}
-			{isValid && "✅"}
+			<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 		</p>
 	);
 }

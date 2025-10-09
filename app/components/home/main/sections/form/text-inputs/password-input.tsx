@@ -14,7 +14,7 @@ export function PasswordInput() {
 		<p>
 			<label
 				htmlFor="password"
-				style={{ width: "110px", display: "inline-block" }}
+				style={{ width: "120px", display: "inline-block" }}
 			>
 				Passwort-Feld:
 			</label>{" "}
@@ -27,7 +27,7 @@ export function PasswordInput() {
 				value={value}
 				onInput={handleInput}
 			/>{" "}
-			{isValid && "✅"}
+			<span style={{ fontSize: "16px" }}>{isValid && "✅"}</span>
 		</p>
 	);
 }
