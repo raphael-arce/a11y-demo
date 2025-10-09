@@ -104,7 +104,7 @@ export default function Index() {
 											type="radio"
 											id={`date-${index}`}
 											name="date"
-											value={date.toString()}
+											// value={date.toString()}
 											disabled={!isAvailable}
 											required={!isAvailable}
 										/>
