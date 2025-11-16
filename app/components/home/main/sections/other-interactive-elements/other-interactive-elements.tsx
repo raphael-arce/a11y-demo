@@ -99,7 +99,7 @@ export function OtherInteractiveElements() {
 						<b>Aufgabe</b>
 					</legend>
 					<p>
-						<ReminderPressTab plural={false} /> und öffne die Detailainsicht.
+						<ReminderPressTab plural={false} /> die Detailansicht zu öffnen.
 					</p>
 					<p>
 						<b>
@@ -122,7 +122,7 @@ export function OtherInteractiveElements() {
 						<b>Aufgabe</b>
 					</legend>
 					<p>
-						<ReminderPressTab plural={false} /> und öffne den Dialog.
+						<ReminderPressTab plural={false} /> den Dialog zu öffnen.
 					</p>
 					<p>
 						<b>
