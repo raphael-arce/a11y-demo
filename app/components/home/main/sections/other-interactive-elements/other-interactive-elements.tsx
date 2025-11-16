@@ -6,6 +6,7 @@ import { EnterKbd } from "../../../primitives/enter-kbd";
 import { Dialog } from "./dialog/dialog";
 import { TabKbd } from "../../../primitives/tab-kbd";
 import { LinkIcon } from "~/components/home/primitives/link-icon";
+import { Summary } from "./summary/summary";
 
 export function OtherInteractiveElements() {
 	return (
@@ -85,6 +86,29 @@ export function OtherInteractiveElements() {
 						</b>
 					</p>
 					<Video />
+				</fieldset>
+
+				<h3>
+					Details{" "}
+					<a id="details-header" href={"#details-header"}>
+						<LinkIcon />
+					</a>
+				</h3>
+				<fieldset>
+					<legend>
+						<b>Aufgabe</b>
+					</legend>
+					<p>
+						<ReminderPressTab plural={false} /> und öffne die Detailainsicht.
+					</p>
+					<p>
+						<b>
+							Hinweis: Du kannst, nachdem das Element fokussiert ist, die{" "}
+							<EnterKbd />
+							-Taste drücken, um die Detailansicht zu öffnen.
+						</b>
+					</p>
+					<Summary />
 				</fieldset>
 
 				<h3>

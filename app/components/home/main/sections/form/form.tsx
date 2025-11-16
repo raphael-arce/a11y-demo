@@ -22,6 +22,7 @@ import { RightKbd } from "../../../primitives/right-kbd";
 import { ShiftKbd } from "../../../primitives/shift-kbd";
 import { ReminderPressTab } from "../../../primitives/reminder-press-tab";
 import { LinkIcon } from "~/components/home/primitives/link-icon";
+import { FileInput } from "./choice-inputs/file/file";
 
 export function Form() {
 	return (
@@ -218,6 +219,30 @@ export function Form() {
 				</p>
 
 				<DateInput />
+			</fieldset>
+
+			<h4>
+				Datei-Feld{" "}
+				<a id="file-inputs" href={"#file-inputs"}>
+					<LinkIcon />
+				</a>
+			</h4>
+			<fieldset>
+				<legend>
+					<b>Aufgabe</b>
+				</legend>
+				<p>
+					<ReminderPressTab plural={false} /> und eine Datei auszuwählen.
+				</p>
+				<p>
+					<b>
+						Hinweis: Du kannst, nachdem das Element fokussiert ist, die{" "}
+						<SpaceKbd />
+						-Taste drücken, um das Dateiauswahlmenü zu öffnen.
+					</b>
+				</p>
+
+				<FileInput />
 			</fieldset>
 
 			<h4>
